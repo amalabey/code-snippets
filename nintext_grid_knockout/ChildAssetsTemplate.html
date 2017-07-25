@@ -1,0 +1,36 @@
+<table class="ad-form-childassetstable">
+    <thead>
+        <tr>
+            <th>Primary Asset ID</th>
+            <th>Child Asset ID</th>
+            <th>Asset Description</th>
+            <th>Business Unit</th>
+            <th>Registration No.</th>
+            <th>Asset Cost</th>
+            <th>WDV</th>
+            <th>Disposed?</th>
+        </tr>
+    </thead>
+    <tfoot>
+        <tr>
+            <td colspan="5">TOTAL</td>
+            <td data-bind="text: totalAssetCost"></td>
+            <td data-bind="text: totalWdv"></td>
+            <td></td>
+        </tr>
+    </tfoot>
+    <tbody data-bind="foreach: assets">
+        <tr>
+            <td data-bind="text: primaryAssetId"></td>
+            <td data-bind="text: childAssetId"></td>
+            <td data-bind="text: description"></td>
+            <td data-bind="text: businessUnitName"></td>
+            <td data-bind="text: registrationNumber"></td>
+            <td data-bind="text: assetCost"></td>
+            <td data-bind="text: wdv"></td>
+            <td>
+                <input type="checkbox" value="" data-bind="checked: isDisposed" />
+            </td>
+        </tr>
+    </tbody>
+</table>
